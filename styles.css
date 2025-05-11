@@ -1,0 +1,66 @@
+@charset "UTF-8";
+body {
+  line-height: 1.75;
+
+  -epub-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+
+  -epub-text-orientation: vertical-right;
+  text-orientation: vertical-right;
+  -epub-text-orientation: vertical-rl;
+  text-orientation: vertical-rl;
+
+  hanging-punctuation: allow-end;
+}
+
+.horizontal {
+  -epub-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
+
+  -epub-text-orientation: mixed;
+  text-orientation: mixed;
+
+  hanging-punctuation: allow-end;
+
+  margin: 0 auto;
+  width: fit-content; /* コンテンツ幅に合わせる */
+}
+
+.horizontal p {
+  text-indent: 0;
+  line-height: 1.2;
+  font-size: xx-small;
+}
+
+p {
+  text-indent: 1em;
+}
+
+p.no-indent,
+div.no-indent p {
+  text-indent: 0;
+}
+
+hr.pagebreak {
+  break-after: always;
+  page-break-after: always;
+  border: none;
+  height: 1px;
+}
+
+/* 縦中横 */
+.tcy {
+  -webkit-text-combine: horizontal;
+  -epub-text-combine: horizontal;
+  text-combine: horizontal;
+
+  -webkit-text-combine-horizontal: all;
+  text-combine-horizontal: all;
+}
+
+nav[epub|type="toc"] ol {
+  list-style-type: none; /* 番号を消す */
+}
+
+nav[epub|type="toc"] li {
+}
